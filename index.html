@@ -1,0 +1,752 @@
+<html lang="EN">
+<head>
+    <title>{title}</title>
+    <meta name="color:Background" content="#DDDDDA"/>
+    <meta name="color:Posts" content="#C5C5C4"/>
+	<meta name="color:Sidebar" content="#424242"/>
+	<meta name="color:Title" content="#FFFFFF"/>
+	<meta name="color:Text1" content="#8F8F8E"/>
+	<meta name="color:Text2" content="#9B9A9A"/>
+	<meta name="color:Link" content="#6B6B6A"/>
+	<meta name="color:Hover" content="#242424"/>
+	<meta name="color:Scrollbar" content="#333333"/>
+	<meta name="image:Logo" content="http://static.tumblr.com/b5ckvmx/qKQm9tsom/logo.jpg"/>
+	<meta name="image:LogoBg" content="http://static.tumblr.com/b5ckvmx/mQjm9rw6u/gif.gif"/>
+	<meta name="if:Aoutch Button" content="1"/>
+	<meta name="if:Show Blog Infos" content="1"/>
+	<meta name="if:Show Default Links" content="1"/>
+	<meta name="if:Show Logo Background" content="1"/>
+	<meta name="if:Show Post Footer" content="1"/>
+	<link rel="stylesheet" href="http://static.tumblr.com/tak5d5w/raDlsuinn/quicksandfonts.css" type="text/css" charset="utf-8">
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<meta name="description" content="{MetaDescription}" />
+	<script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'c1b14d90-7b0b-4b3b-9025-cb58a4dcf184'});</script>
+	<link rel="shortcut icon" href="{Favicon}">
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}" />
+	
+	<style type="text/css">
+		body{
+			margin:0px;
+			height:100%;
+			font-size: 11px;
+			font-family: 'Lato', sans-serif;
+			line-height:12px;
+			color:{color:Text1};
+			background-color: {color:Background};
+		}
+		::-webkit-scrollbar {width: 5px; height: 5px; background: {color:Background}; }
+		::-webkit-scrollbar-thumb { background-color: {color:scrollbar}; -webkit-border-radius: 4ex; }
+		img {
+			image-rendering: optimizeQuality;  /* Firefox 3.6+; default behavior is identical, no need to specify */
+			-ms-interpolation-mode: bicubic;   /* Internet Explorer 7.0; default in IE8+ */
+		}
+		a:link, a:active, a:visited{
+			color: {color:Link};
+			text-decoration: none;
+			-webkit-transition: all 0.6s ease-out;
+			-moz-transition: all 0.6s ease-out;
+			-o-transition: all   0.6s ease-out;
+			transition: all 0.6s ease-out;
+			border:none !important;
+		}
+		a:hover{
+			color:{color:Hover};
+			text-decoration: none;
+			-webkit-transition: all 0.3s ease-out;
+			-moz-transition: all 0.3s ease-out;
+			-o-transition: all   0.3s ease-out;
+			transition: all 0.3s ease-out;
+		}
+		a:focus {outline:0;}
+		.logobg {
+			text-align: center;
+			font-size: 28px;
+			margin-top: 0px;
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			display:block;
+			{block:ifshowlogobackground}background: transparent url("{image:LogoBg}") top left no-repeat;{/block:ifshowlogobackground}
+		}
+		.logobg img:hover {
+			opacity:0;
+		}
+		
+		h1 {
+			font-weight:900;
+			font-size:18px;
+			font-style: italic;
+			color:{color:Title};
+			margin:14px 10px 10px 10px;
+			padding-bottom:10px;
+			border-bottom:1px dashed {color:Text2};
+		}
+
+		blockquote{
+			padding:0px 0px 2px 3px;
+			margin:0px 0px 2px 1px;
+		}
+		
+		ul, ol, li{
+			list-style:none;
+			margin:0px;
+			padding:0px;
+		}
+		/* SIDEBAR */
+		.sidebar {
+			background-color:{color:Sidebar} !important;
+			color:{color:Text2} !important;
+		}
+		.sidebar .desc {
+			padding:0 10px;
+			text-align: justify;
+		}
+		.pages-link {
+			border-top:1px dashed {color:Text2};
+			padding:10px 0 12px;
+			margin:0 10px;
+		}
+		/* WRAPPER */
+		#aoutch-wrapper{
+			height:100%;
+			margin-bottom:50px;
+			top:10px;
+			padding-top:0px;
+			position:relative;
+			{block:permalinkpage}
+			padding-left:10px;
+			{/block:permalinkpage}
+		}
+		#posts{}
+		/* POST */
+		#post {
+			{block:IndexPage}
+			width:265px;
+			{/block:IndexPage}
+			height:auto;
+		}
+		.post-separator {
+			height:1px;
+			border-top:1px dashed {color:Text1};
+			opacity:0.5;
+			margin:-4px 10px 0 10px;
+		}
+		.post-text-separator {
+			height:1px;
+			border-top:1px dashed {color:Text1};
+			opacity:0.5;
+			margin:-4px 0 0 0;
+		}
+		.post-infos {
+			padding:6px 10px 10px 10px;
+		}
+		.post-infos .notecount {float:right;}
+		.post-infos a {
+			color:{color:Link};
+		}
+		.post-infos a:hover {
+			color:{color:Hover};
+		}
+		.post-text-infos {
+			padding:6px 0 10px 0;
+		}
+		.post-text-infos a {
+			color:{color:Link};
+		}
+		.post-text-infos a:hover {
+			color:{color:Hover};
+		}
+		#entry {
+			background-color:{color:Posts};
+			z-index:1;
+			float: left;
+			{block:IndexPage}
+			width: 265px;
+			padding:0px;
+			margin-left:5px;
+			margin-right:5px;
+			{/block:IndexPage}
+			{block:PermalinkPage}
+			max-width:520px;
+			padding:10px;
+			{/block:PermalinkPage}
+			margin-bottom:10px;
+			color:{color:Text1};
+		}
+		/* PHOTOS BLOCK */
+		#entry a.pic-link {display:block;margin-bottom:-3px;}
+		#entry .image {
+			{block:IndexPage}
+			width: 265px;
+			height: auto;
+			{/block:IndexPage}
+		}
+		#entry iframe, #entry object {
+			{block:IndexPage}
+			width: 265px !important;
+			height: auto;
+			{/block:IndexPage}
+		}
+		#entry .caption{
+			padding:0 10px;
+		}
+		#entry .caption-perma{
+			padding:0;
+		}
+		/* TEXT BLOCK */
+		#entry .text-block {padding:0 10px;margin:0;text-align:justify;}
+		#entry .text-block .title {
+			padding:10px 0 0 0;
+			margin:0;
+			font-weight:700;
+			font-size:15px;
+			font-style: italic;
+		}
+		#entry .text-block .title a {
+			text-decoration: underline;
+			display: block;
+		}
+		#entry .title-link {
+			padding:10px 10px 10px 10px;
+			margin:0;
+			font-weight:700;
+			font-size:15px;
+			font-style: italic;
+			text-decoration: underline;
+			display: block;
+		}
+		#entry .caption-link{
+			padding:0 10px;
+			margin-top:-10px;
+		}
+		#entry .title-quote {
+			padding:10px 10px 10px 10px;
+			margin:0;
+			font-weight:700;
+			font-size:15px;
+			font-style: italic;
+			display: block;
+		}
+		#entry .source {padding:0 10px 10px 10px;font-size:10px;}
+		#entry .text-block-perma {padding:0;margin:0;text-align:justify;}
+		#entry .text-block-perma .title {
+			padding:0;
+			margin:0;
+			font-weight:700;
+			font-size:15px;
+			font-style: italic;
+			color:{color:Title};
+			text-decoration: underline;
+		}
+		.chat {padding:10px 0;}
+		.chat .label {font-weight:bold;}
+		.audio embed {width:265px !important;}
+		/* FOOTER */
+		.footer {
+			z-index:2;
+			width:100%;
+			height:32px;
+			position:fixed;
+			bottom:0;
+			left:0;
+			background-color:{color:Sidebar};
+			color:{color:Text2};
+		}
+		.footer .left {float:left;padding-top:10px;padding-left:10px;}
+		.footer .right {float:right;padding-top:10px;padding-right:10px;}
+		.footer a {
+			color:{color:Text2};
+			float:left;
+			display:block;
+			margin:0 5px;
+			text-transform: uppercase;
+		}
+		.footer a:hover {
+			opacity:0.7;
+		}
+		.perma-notes {
+			width:520px;
+			background-color:{color:Posts};
+		}
+		.perma-sidebar {position:absolute;top:0;left:50%;margin-left:-385px;;}
+		ol.notes {
+                padding: 0px;
+                margin: 0px;
+                list-style-type: none;
+            }
+
+            ol.notes li.note {
+                padding: 10px;
+            }
+
+            ol.notes li.note img.avatar {
+                vertical-align: -4px;
+                margin-right: 10px;
+                width: 16px;
+                height: 16px;
+            }
+
+            ol.notes li.note span.action {
+                font-weight: bold;
+            }
+
+            ol.notes li.note .answer_content {
+                font-weight: normal;
+            }
+
+            ol.notes li.note blockquote {
+                border-color: #eee;
+                padding: 4px 10px;
+                margin: 10px 0px 0px 25px;
+            }
+
+            ol.notes li.note blockquote a {
+                text-decoration: none;
+            }
+            
+		{block:indexpage}
+		@media screen and (max-width: 500px) {
+			#aoutch-wrapper{width:295px;left:50%;margin-left:-142px;}
+			#posts{width:275px;}
+		}
+		@media screen and (min-width: 501px) {
+			#aoutch-wrapper{width:295px;left:50%;margin-left:-142px;}
+			#posts{width:275px;}
+		}
+		@media screen and (min-width: 0px) and (max-width: 549px) {
+			#aoutch-wrapper{width:295px;left:50%;margin-left:-142px;}
+			#posts{width:275px;}
+		}
+		@media screen and (min-width: 550px) and (max-width: 824px) {
+			#aoutch-wrapper{width:550px;left:50%;margin-left:-275px;}
+			#posts{width:550px;}
+		}
+		@media screen and (min-width: 825px) and (max-width: 1099px) {
+			#aoutch-wrapper{width:825px;left:50%;margin-left:-412px;}
+			#posts{width:825px;}
+		}
+		@media screen and (min-width: 1100px) and (max-width: 1374px) {
+			#aoutch-wrapper{width:1100px;left:50%;margin-left:-550px;}
+			#posts{width:1100px;}
+		}
+		@media screen and (min-width: 1375px) and (max-width: 1649px) {
+			#aoutch-wrapper{width:1375px;left:50%;margin-left:-687px;}
+			#posts{width:1375px;}
+		}
+		@media screen and (min-width: 1650px) and (max-width: 1924px) {
+			#aoutch-wrapper{width:1650px;left:50%;margin-left:-825px;}
+			#posts{width:1650px;}
+		}
+		@media screen and (min-width: 1650px) and (max-width: 1924px) {
+			#aoutch-wrapper{width:1650px;left:50%;margin-left:-825px;}
+			#posts{width:1650px;}
+		}
+		@media screen and (min-width: 1925px) and (max-width: 2199px) {
+			#aoutch-wrapper{width:1925px;left:50%;margin-left:-962px;}
+			#posts{width:1925px;}
+		}
+		@media screen and (min-width: 2200px) and (max-width: 2474px) {
+			#aoutch-wrapper{width:2200px;left:50%;margin-left:-1100px;}
+			#posts{width:2200px;}
+		}
+		@media screen and (min-width: 2475px) and (max-width: 2560px) {
+			#aoutch-wrapper{width:2475px;left:50%;margin-left:-1237px;}
+			#posts{width:2475px;}
+		}
+		{/block:indexpage}
+		{block:PermalinkPage}
+			#aoutch-wrapper{width:520px;left:50%;margin-left:-260px;}
+			#posts{width:520px;}
+        {/block:PermalinkPage}
+		
+		/*
+			ColorBox Core Style:
+			The following CSS is consistent between example themes and should not be altered.
+		*/
+		#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+		#cboxOverlay{position:fixed; width:100%; height:100%;}
+		#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+		#cboxContent{position:relative;}
+		#cboxLoadedContent{overflow:auto;}
+		#cboxTitle{margin:0;}
+		#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+		#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+		.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none;}
+		.cboxIframe{width:100%; height:100%; display:block; border:0;}
+		#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box;}
+
+		/* 
+			User Style:
+			Change the following styles to modify the appearance of ColorBox.  They are
+			ordered & tabbed in a way that represents the nesting of the generated HTML.
+		*/
+		#cboxOverlay{background-color:{color:Background};}
+		#colorbox{}
+		/*
+		#cboxTopLeft{width:21px; height:21px; background:url(http://static.tumblr.com/b5ckvmx/ZnOm9s4sn/controls.png) no-repeat -101px 0;}
+		#cboxTopRight{width:21px; height:21px; background:url(http://static.tumblr.com/b5ckvmx/ZnOm9s4sn/controls.png) no-repeat -130px 0;}
+		#cboxBottomLeft{width:21px; height:21px; background:url(http://static.tumblr.com/b5ckvmx/ZnOm9s4sn/controls.png) no-repeat -101px -29px;}
+		#cboxBottomRight{width:21px; height:21px; background:url(http://static.tumblr.com/b5ckvmx/ZnOm9s4sn/controls.png) no-repeat -130px -29px;}
+		#cboxMiddleLeft{width:21px; background:url(http://static.tumblr.com/b5ckvmx/ZnOm9s4sn/controls.png) left top repeat-y;}
+		#cboxMiddleRight{width:21px; background:url(http://static.tumblr.com/b5ckvmx/ZnOm9s4sn/controls.png) right top repeat-y;}
+		#cboxTopCenter{height:21px; background:url(http://static.tumblr.com/b5ckvmx/L2Ym9s4u7/border.png) 0 0 repeat-x;}
+		#cboxBottomCenter{height:21px; background:url(http://static.tumblr.com/b5ckvmx/L2Ym9s4u7/border.png) 0 -29px repeat-x;}
+		*/
+		#cboxContent{background:transparent; overflow:hidden;}
+        .cboxIframe{background:#fff;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{margin-bottom:28px;}
+        #cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+        #cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
+        #cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+        #cboxPrevious{position:absolute; bottom:0; left:0; background:url(http://static.tumblr.com/b5ckvmx/ZnOm9s4sn/controls.png) no-repeat -75px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxPrevious:hover{background-position:-75px -25px;}
+        #cboxNext{position:absolute; bottom:0; left:27px; background:url(http://static.tumblr.com/b5ckvmx/ZnOm9s4sn/controls.png) no-repeat -50px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxNext:hover{background-position:-50px -25px;}
+        #cboxLoadingOverlay{background-color:transparent;}
+        #cboxLoadingGraphic{background:transparent;}
+        #cboxClose{position:absolute; top:0; right:0; background:url(http://static.tumblr.com/b5ckvmx/Vtwm9s5uk/close.gif) top left no-repeat; width:25px; height:25px; text-indent:-9999px;}
+        #cboxClose:hover{}
+
+        /*
+	        The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+	        when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+	        See: http://jacklmoore.com/notes/ie-transparency-problems/
+	     */
+	    .cboxIE #cboxTopLeft,
+	    .cboxIE #cboxTopCenter,
+	    .cboxIE #cboxTopRight,
+	    .cboxIE #cboxBottomLeft,
+	    .cboxIE #cboxBottomCenter,
+	    .cboxIE #cboxBottomRight,
+	    .cboxIE #cboxMiddleLeft,
+	    .cboxIE #cboxMiddleRight {
+		    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+    	}
+
+    	/*
+	    	The following provides PNG transparency support for IE6
+	    	Feel free to remove this and the /ie6/ directory if you have dropped IE6 support.
+	    */
+	    .cboxIE6 #cboxTopLeft{background:url(images/ie6/borderTopLeft.png);}
+	    .cboxIE6 #cboxTopCenter{background:url(images/ie6/borderTopCenter.png);}
+	    .cboxIE6 #cboxTopRight{background:url(images/ie6/borderTopRight.png);}
+	    .cboxIE6 #cboxBottomLeft{background:url(images/ie6/borderBottomLeft.png);}
+	    .cboxIE6 #cboxBottomCenter{background:url(images/ie6/borderBottomCenter.png);}
+	    .cboxIE6 #cboxBottomRight{background:url(images/ie6/borderBottomRight.png);}
+	    .cboxIE6 #cboxMiddleLeft{background:url(images/ie6/borderMiddleLeft.png);}
+	    .cboxIE6 #cboxMiddleRight{background:url(images/ie6/borderMiddleRight.png);}
+
+	    .cboxIE6 #cboxTopLeft,
+	    .cboxIE6 #cboxTopCenter,
+	    .cboxIE6 #cboxTopRight,
+	    .cboxIE6 #cboxBottomLeft,
+	    .cboxIE6 #cboxBottomCenter,
+	    .cboxIE6 #cboxBottomRight,
+	    .cboxIE6 #cboxMiddleLeft,
+	    .cboxIE6 #cboxMiddleRight {
+		    _behavior: expression(this.src = this.src ? this.src : this.currentStyle.backgroundImage.split('"')[1], this.style.background = "none", this.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=" + this.src + ", sizingMethod='scale')");
+    	}
+
+		{CustomCSS}
+
+	</style>
+	
+</head>
+<body>
+	<div class="footer">
+		<div class="left">
+			{block:HasPages}
+				{block:Pages}
+				<a href="{URL}" class="link">{Label}</a>
+				{/block:Pages}
+			{/block:HasPages}
+			{block:ifshowdefaultlinks}
+				<a href="/archive" class="link">Archive</a>
+				<a href="/ask" class="link">Ask</a>
+			{/block:ifshowdefaultlinks}
+		</div>
+		<div class="right">
+		{block:ifAoutchButton}
+			<a href="http://redwolv.es">Theme by Redwolv.es</a>
+		{/block:ifAoutchButton}
+			<a href="http://www.redwolv.es/greed-tumblr-theme/">Install theme</a>
+		</div>
+	</div>
+	<div id="aoutch-wrapper">
+		<div id="posts">
+			{block:PermalinkPage}
+			<div class="perma-sidebar"><a href="/"><img src="{image:Logo}" width="120" /></a></div>
+			{/block:PermalinkPage}
+	
+		
+			{block:Posts}
+			
+				<!-- PHOTOS -->
+				{block:Photo}
+				<div id="entry">
+					{block:IndexPage}
+						<div id="post">
+							<a href="{PhotoURL-HighRes}" class="pic-link"><img src="{PhotoURL-500}" width="265" height="auto" class="image"/><div style="clear:both"></div></a>
+							{block:ifshowpostfooter}
+								{block:Caption}
+								<div class="caption">{Caption}</div>
+								<div class="post-separator"></div>
+								{/block:Caption}
+								<div class="post-infos"><a href="{Permalink}">{TimeAgo}</a>
+									{block:NoteCount}<div class="notecount">{NoteCount}&hearts;</div>{/block:NoteCount}
+								</div>
+        					{/block:ifshowpostfooter}
+						</div>
+					{/block:IndexPage}
+					{block:PermalinkPage}
+						<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+						{block:Caption}
+							<div class="caption-perma">{Caption}</div>
+        				{/block:Caption}
+					{/block:PermalinkPage}
+				</div>
+				{/block:Photo}
+				
+				<!-- TEXT -->
+                {block:Text}
+                <div id="entry">
+                	{block:IndexPage}
+                    <div id="post">
+                    	<div class="text-block">
+                        	{block:Title}
+                            <div class="title"><a href="{Permalink}">{Title}</a></div>
+                            {/block:Title}
+                            {Body}
+							{block:ifshowpostfooter}
+								<div class="post-text-separator"></div>
+								<div class="post-text-infos">
+									<a href="{Permalink}">{TimeAgo}</a>
+									{block:NoteCount}<div class="notecount">{NoteCount}&hearts;</div>{/block:NoteCount}
+								</div>
+        					{/block:ifshowpostfooter}
+                    	</div>
+                    </div>
+                    {/block:IndexPage}
+					{block:PermalinkPage}
+						<div class="text-block-perma">
+                        	{block:Title}
+                            <div class="title">{Title}</div>
+                            {/block:Title}
+                            {Body}
+                    	</div>
+					{/block:PermalinkPage}
+                </div>
+                {/block:Text}
+                
+   				<!-- VIDEOS -->             
+                {block:Video}
+                <div id="entry">
+                	{block:IndexPage}
+						<div id="post">
+							{Video-400}
+							{block:ifshowpostfooter}
+								{block:Caption}
+								<div class="caption">{Caption}</div>
+								<div class="post-separator"></div>
+								{/block:Caption}
+								<div class="post-infos">
+									<a href="{Permalink}">{TimeAgo}</a>
+									{block:NoteCount}<div class="notecount">{NoteCount}&hearts;</div>{/block:NoteCount}
+								</div>
+        					{/block:ifshowpostfooter}
+						</div>
+					{/block:IndexPage}
+					{block:PermalinkPage}
+						{Video-700}
+						{block:Caption}
+							<div class="caption-perma">{Caption}</div>
+        				{/block:Caption}
+					{/block:PermalinkPage}
+                </div>
+                {/block:Video}
+                
+                <!-- LINKS --> 
+                {block:Link}
+                <div id="entry">
+                	{block:IndexPage}
+						<div id="post">
+							<div class="title-link"><a href="{URL}" target="{Target}">{Name}</a></div>
+							{block:Description} 
+							<div class="caption-link">{Description}</div>
+							{/block:Description}
+							{block:ifshowpostfooter}
+								<div class="post-separator"></div>
+								<div class="post-infos">
+									<a href="{Permalink}">{TimeAgo}</a>
+									{block:NoteCount}<div class="notecount">{NoteCount}&hearts;</div>{/block:NoteCount}
+								</div>
+        					{/block:ifshowpostfooter}
+						</div>
+					{/block:IndexPage}
+					{block:PermalinkPage}
+						<div class="text-block-perma">
+                        	<div class="title-link"><a href="{URL}" target="{Target}">{Name}</a></div>
+                            {block:Description} 
+							<div class="caption">{Description}</div>
+							{/block:Description}
+                    	</div>
+					{/block:PermalinkPage}
+                </div>
+                {/block:Link}
+                
+                <!-- QUOTES --> 
+                {block:Quote}
+                <div id="entry">
+                	{block:IndexPage}
+						<div id="post">
+							<div class="title-quote">{Quote}</div>
+							{block:Source} 
+							<div class="source">{Source}</div>
+							{/block:Source}
+							{block:ifshowpostfooter}
+								<div class="post-separator"></div>
+								<div class="post-infos">
+									<a href="{Permalink}">{TimeAgo}</a>
+									{block:NoteCount}<div class="notecount">{NoteCount}&hearts;</div>{/block:NoteCount}
+								</div>
+        					{/block:ifshowpostfooter}
+						</div>
+					{/block:IndexPage}
+					{block:PermalinkPage}
+						<div class="quote-block-perma">
+                        	<div class="title-quote">{Quote}</div>
+							{block:Source} 
+							<div class="source">{Source}</div>
+							{/block:Source}
+                    	</div>
+					{/block:PermalinkPage}
+                </div>
+                {/block:Quote}  
+                
+                <!-- CHATS --> 
+                {block:Chat}
+                 <div id="entry">
+                 	{block:IndexPage}
+					<div id="post">
+						<div class="text-block">
+                        	{block:Title}
+                        	<div class="title-link"><a href="{Permalink}">{Title}</a></div>
+                        	{/block:Title}
+                        	<ul class="chat">
+                            	{block:Lines}
+                                <li class="{Alt} user_{UserNumber}">
+                                    {block:Label}
+                                        <span class="label">{Label}</span>
+                                    {/block:Label}
+
+                                    {Line}
+                                </li>
+                                {/block:Lines}
+                            </ul>
+						</div>
+                        {block:ifshowpostfooter}
+							<div class="post-separator"></div>
+							<div class="post-infos">
+								<a href="{Permalink}">{TimeAgo}</a>
+								{block:NoteCount}<div class="notecount">{NoteCount}&hearts;</div>{/block:NoteCount}
+							</div>
+        				{/block:ifshowpostfooter}
+					</div>
+					{/block:IndexPage}
+                </div>
+                {/block:Chat}
+                
+                <!-- AUDIOS --> 
+                {block:Audio}
+                 <div id="entry">
+                 	{block:IndexPage}
+                 	<div id="post">
+                    <div class="audio">
+                        {AudioPlayerWhite}
+                        {block:AlbumArt}
+                        <img src="{AlbumArtURL}" width="265"/>
+                        {/block:AlbumArt}
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </div>
+                            {block:ifshowpostfooter}
+								<div class="post-separator"></div>
+								<div class="post-infos">
+									<a href="{Permalink}">{TimeAgo}</a>
+									{block:NoteCount}<div class="notecount">{NoteCount}&hearts;</div>{/block:NoteCount}
+								</div>
+        					{/block:ifshowpostfooter}
+                 	</div>
+					{/block:IndexPage}
+                </div>
+                {/block:Audio}              
+                
+                
+				{block:PermalinkPage}
+        			{block:Posts}
+        				<div style="clear:both;"></div>
+        				<div class="perma-notes">
+        					<div style="padding:10px;margin-bottom:10px;"><span st_url='{Permalink}' st_title='{Title}' class='st_facebook_hcount' displayText='Facebook'></span><span st_url='{Permalink}' st_title='{Title}' class='st_fblike_hcount' displayText='Facebook Like'></span><span st_url='{Permalink}' st_title='{Title}' class='st_twitter_hcount' displayText='Tweet'></span><span st_url='{Permalink}' st_title='{Title}' class='st_pinterest_hcount' displayText='Pinterest'></span><span st_url='{Permalink}' st_title='{Title}' class='st_email_hcount' displayText='Email'></span></div>
+        				</div>
+        				<div class="perma-notes">{PostNotes}</div>
+        			{/block:Posts}
+				{/block:PermalinkPage}
+           {/block:Posts}
+						
+		</div>
+	</div>
+	{block:indexpage}
+	{block:NextPage}<div id="page-nav"><a href="{NextPage}"></a></div>{/block:NextPage}
+	<script type="text/javascript" src="http://static.tumblr.com/6jvmzbl/JqEmfzt71/jquery.min.1.4.4.js"></script>
+	<script type="text/javascript" src="http://static.tumblr.com/6jvmzbl/LtGmfzt7o/jquery.masonry.v2.js"></script>
+	<script type="text/javascript" src="http://static.tumblr.com/6jvmzbl/CkZmfzt88/jquery.colorbox-min.js"></script>
+	<script type="text/javascript" src="http://static.tumblr.com/6jvmzbl/b19mfzt8q/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+	<script type="text/javascript">
+		$(window).load(function(){
+		$(".pic-link").colorbox({transition:"none", maxWidth:"90%", maxHeight:"90%", photo:true});
+		//$(".group1").colorbox({rel:'group1'});
+		$('#posts').prepend('<div id="entry" class="sidebar"><a href="/" class="logobg"><img src="{image:Logo}" width="265" /></a>{block:IfShowBlogInfos}<h1>{title}</h1><p class="desc">{Description}</p>{/block:IfShowBlogInfos}</div>');
+		
+		var $wall = $('#posts');
+		
+		$wall.imagesLoaded(function(){
+			$wall.masonry({
+				itemSelector: '#entry, #entry_photo',
+				isAnimated : false,
+			});
+		});
+		
+		$wall.infinitescroll({
+			navSelector    : '#page-nav',
+			nextSelector   : '#page-nav a',
+			itemSelector   : '#entry, #entry_photo',
+			bufferPx       : 2000,
+			debug          : false,
+			errorCallback: function() {
+				$('#infscr-loading').fadeOut('normal');
+			}},
+			function( newElements ) {
+				var $newElems = $( newElements );
+				$newElems.hide();
+				$newElems.imagesLoaded(function(){
+					$wall.masonry( 'appended', $newElems,{isAnimated: false}, function(){$newElems.fadeIn('slow');
+					$(".pic-link").colorbox({transition:"none", maxWidth:"90%", maxHeight:"90%", photo:true});
+				});
+			});
+		}); $('#content').show(500);
+		
+		// Load 2nd & 3rd Page
+		setTimeout(function() { 
+        	$wall.infinitescroll('retrieve');
+        	setTimeout(function() { 
+            	$wall.infinitescroll('retrieve');
+            }, 4500);
+        }, 1500);
+		
+	});
+	</script>
+	{/block:indexpage}
+</body>
+</html>
